@@ -1,0 +1,53 @@
+﻿
+
+<h2 class="text-bg-danger px-3 py-1 text-capitalize">@ViewBag.Anime.Name</h2>
+
+<div class="anime-details">
+    <div class="anime-card">
+        <img src="@ViewBag.Anime.Image.Original" alt="@ViewBag.Anime.Name" class="anime-image" />
+        <ul class="anime-info">
+            <li><strong>Kind:</strong> @ViewBag.Anime.Kind</li>
+            <li><strong>Episodes:</strong> @ViewBag.Anime.Episodes</li>
+            <li><strong>Episodes Aired:</strong> @ViewBag.Anime.EpisodesAired</li>
+            <li><strong>Score:</strong> @ViewBag.Anime.Score</li>
+        </ul>
+    </div>
+
+    <div class="anime-description">
+        <h3>Description</h3>
+        <p>@ViewBag.Description.LongText</p>
+    </div>
+</div>
+
+<style>
+    .anime-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .anime-card {
+        text-align: center;
+    }
+
+    .anime-image {
+        width: 300px;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .anime-info {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .anime-info li {
+            margin: 5px 0;
+        }
+
+    .anime-description {
+        margin-top: 20px;
+    }
+</style>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>@ViewBag.Title - AnimeMagic </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            <a href="@Url.Action("Index", "Home", new { area = "" })" class="navbar-brand">
+                <img src="../../Content/logo.svg" alt="Anime_Plex Logo" style="width: 50px; height: auto;" />
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="container-fluid w-100 h-50 d-flex flex-column justify-content-center align-items-center text-center bg-dark" style="background-image: url('../../Content/logo.svg'); background-size: 96px; background-position: bottom right; background-repeat: no-repeat ">
+        <div class="row d-flex align-items-center">
+            <div class="col-6">
+                <img src="../../Content/anime.png" alt="logo" width="320" height="400" class="mb-3" />
+            </div>
+            <h1 class="display-4 text-white font-weight-bold col-6 mb-3 hero-text">
+                Explore The <span class="text-danger">Diverse Realms</span> of Anime Magic
+            </h1>
+        </div>
+    </header>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="container row">
+            <div class="col-8">
+                <a href="@Url.Action("Index", "Home", new { area = "" })" class="navbar-brand">
+                    <img src="../../Content/logo.svg" alt="Anime_Plex Logo" style="width: 50px; height: auto;" />
+                </a>
+            </div>
+            <div class="col-4">
+                <h4>&copy; @DateTime.Now.Year - AnimeMagic </h4>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

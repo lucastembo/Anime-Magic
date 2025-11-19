@@ -1,0 +1,67 @@
+﻿
+<main aria-labelledby="title" class="container my-5">
+    <section class="text-center mb-5">
+        <h2 id="title">@ViewBag.Title</h2>
+        <h3 class="text-muted">@ViewBag.Message</h3>
+    </section>
+
+    <section class="mb-5">
+        <h3>Get in Touch with Us</h3>
+        <p>If you have any questions, feedback, or just want to say hello, we’d love to hear from you! Fill out the form below or reach us through our contact information.</p>
+    </section>
+
+    <section class="mb-5">
+        <h3>Contact Information</h3>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 text-primary"></i>
+                        <h5>Email Us</h5>
+                        <p>You can reach us at:</p>
+                        <a href="mailto:support@animeplex.com" class="btn btn-outline-primary">support@animemagic.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-phone fa-3x mb-3 text-primary"></i>
+                        <h5>Call Us</h5>
+                        <p>Give us a call:</p>
+                        <a href="tel:+123456789" class="btn btn-outline-primary">+1 234 567 8</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-5">
+        <h3>Send Us a Message</h3>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName">Your Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Your Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputMessage">Message</label>
+                <textarea class="form-control" id="inputMessage" rows="4" placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <section class="text-center">
+        <h3>Follow Us</h3>
+        <p>Stay connected with us on social media:</p>
+        <a href="#" class="btn btn-outline-secondary mr-2"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="#" class="btn btn-outline-secondary mr-2"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#" class="btn btn-outline-secondary"><i class="fab fa-instagram"></i> Instagram</a>
+    </section>
+</main>
